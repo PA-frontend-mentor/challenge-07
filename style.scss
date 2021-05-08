@@ -1,0 +1,194 @@
+:root {
+  --font-primary: hsl(240, 38%, 20%);
+  --font-secondary: hsl(240, 18%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  color: var(--font-primary);
+}
+
+body {
+  width: fit-content;
+  height: 100vh;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  height: 500px;
+  position: relative;
+
+  .quote-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    flex: 2.5;
+    /* width: 70%; */
+    min-width: 460px;
+    max-width: 650px;
+
+    .quote {
+      width: 650px;
+      font-size: 32px;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+      z-index: 5;
+      position: relative;
+    }
+
+    .writer-info {
+      display: flex;
+      align-items: flex-end;
+      font-size: 20px;
+
+      p {
+        font-weight: 700;
+      }
+
+      span {
+        font-weight: 500;
+        color: var(--font-secondary);
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  .img-wrapper {
+    transform: translateX(-90px);
+
+    .writer-img {
+      width: 500px;
+      height: 500px;
+
+      background: url(./images/image-tanya.jpg) no-repeat;
+      background-size: cover;
+
+      border-radius: 5px;
+    }
+
+    .graphic-3 {
+      background: url(./images/pattern-bg.svg) no-repeat;
+      background-size: contain;
+      width: 632px;
+      height: 596px;
+      position: absolute;
+      top: -56px;
+      left: -50px;
+
+      z-index: -1;
+    }
+
+    .btn-wrapper {
+      width: 120px;
+      height: 60px;
+
+      border-radius: 30px;
+
+      background-color: white;
+
+      box-shadow: 0px 21px 115px var(--font-primary);
+
+      transform: translate(60px, -50%);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      overflow: hidden;
+
+      .left-btn {
+        flex: 1;
+        height: 100%;
+
+        background: url(./images/icon-prev.svg) no-repeat;
+        background-position: center;
+      }
+
+      .right-btn {
+        flex: 1;
+        height: 100%;
+
+        background: url(./images/icon-next.svg) no-repeat;
+        background-position: center;
+      }
+
+      & > div:hover {
+        cursor: pointer;
+        background-color: #e4e4e4;
+      }
+    }
+  }
+
+  .graphic-2 {
+    background: url(./images/pattern-quotes.svg) no-repeat;
+    background-size: contain;
+    height: 114px;
+    width: 125px;
+    position: absolute;
+    top: 0;
+    left: 60px;
+  }
+}
+
+.graphic-1 {
+  background: url(./images/pattern-curve.svg) no-repeat;
+  background-size: cover;
+
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 600px;
+  height: 150px;
+}
+
+@media only screen and (max-width: 1250px) {
+  main {
+    width: calc(100% - 90px);
+    .quote-wrapper {
+      .quote {
+        font-size: 24px;
+        width: 100%;
+      }
+
+      .writer-info {
+        font-size: 16px;
+      }
+    }
+
+    .img-wrapper {
+      .graphic-3 {
+        background-size: contain;
+        width: 520px;
+        height: 556px;
+        position: absolute;
+        top: -56px;
+        left: -50px;
+      }
+
+      .writer-img {
+        width: 400px;
+        height: 400px;
+      }
+
+      .btn-wrapper {
+        width: 90px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 895px) {
+}

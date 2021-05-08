@@ -1,1 +1,203 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+:root {
+  --font-primary: hsl(240, 38%, 20%);
+  --font-secondary: hsl(240, 18%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  color: var(--font-primary);
+}
+
+body {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 500px;
+  position: relative;
+}
+
+main .quote-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 2.5;
+      -ms-flex: 2.5;
+          flex: 2.5;
+  /* width: 70%; */
+  min-width: 460px;
+  max-width: 650px;
+}
+
+main .quote-wrapper .quote {
+  width: 650px;
+  font-size: 32px;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  z-index: 5;
+  position: relative;
+}
+
+main .quote-wrapper .writer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 20px;
+}
+
+main .quote-wrapper .writer-info p {
+  font-weight: 700;
+}
+
+main .quote-wrapper .writer-info span {
+  font-weight: 500;
+  color: var(--font-secondary);
+  padding-left: 1rem;
+}
+
+main .img-wrapper {
+  -webkit-transform: translateX(-90px);
+          transform: translateX(-90px);
+}
+
+main .img-wrapper .writer-img {
+  width: 500px;
+  height: 500px;
+  background: url(./images/image-tanya.jpg) no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+main .img-wrapper .graphic-3 {
+  background: url(./images/pattern-bg.svg) no-repeat;
+  background-size: contain;
+  width: 632px;
+  height: 596px;
+  position: absolute;
+  top: -56px;
+  left: -50px;
+  z-index: -1;
+}
+
+main .img-wrapper .btn-wrapper {
+  width: 120px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: white;
+  -webkit-box-shadow: 0px 21px 115px var(--font-primary);
+          box-shadow: 0px 21px 115px var(--font-primary);
+  -webkit-transform: translate(60px, -50%);
+          transform: translate(60px, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+main .img-wrapper .btn-wrapper .left-btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  background: url(./images/icon-prev.svg) no-repeat;
+  background-position: center;
+}
+
+main .img-wrapper .btn-wrapper .right-btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  background: url(./images/icon-next.svg) no-repeat;
+  background-position: center;
+}
+
+main .img-wrapper .btn-wrapper > div:hover {
+  cursor: pointer;
+  background-color: #e4e4e4;
+}
+
+main .graphic-2 {
+  background: url(./images/pattern-quotes.svg) no-repeat;
+  background-size: contain;
+  height: 114px;
+  width: 125px;
+  position: absolute;
+  top: 0;
+  left: 60px;
+}
+
+.graphic-1 {
+  background: url(./images/pattern-curve.svg) no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 600px;
+  height: 150px;
+}
+
+@media only screen and (max-width: 1250px) {
+  main {
+    width: calc(100% - 90px);
+  }
+  main .quote-wrapper .quote {
+    font-size: 24px;
+    width: 100%;
+  }
+  main .quote-wrapper .writer-info {
+    font-size: 16px;
+  }
+  main .img-wrapper .graphic-3 {
+    background-size: contain;
+    width: 520px;
+    height: 556px;
+    position: absolute;
+    top: -56px;
+    left: -50px;
+  }
+  main .img-wrapper .writer-img {
+    width: 400px;
+    height: 400px;
+  }
+  main .img-wrapper .btn-wrapper {
+    width: 90px;
+    height: 40px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
