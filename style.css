@@ -148,7 +148,7 @@ main .img-wrapper .btn-wrapper .right-btn {
   background-position: center;
 }
 
-main .img-wrapper .btn-wrapper > div:hover {
+main .img-wrapper .btn-wrapper > div:active {
   cursor: pointer;
   background-color: #e4e4e4;
 }
@@ -305,6 +305,13 @@ main .graphic-2 {
   }
   .graphic-1 {
     height: 60px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  main .img-wrapper .btn-wrapper > div:hover {
+    cursor: pointer;
+    background-color: #e4e4e4;
   }
 }
 /*# sourceMappingURL=style.css.map */

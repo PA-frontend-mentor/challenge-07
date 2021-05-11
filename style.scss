@@ -126,7 +126,7 @@ main {
         background-position: center;
       }
 
-      & > div:hover {
+      & > div:active {
         cursor: pointer;
         background-color: #e4e4e4;
       }
@@ -305,5 +305,18 @@ main {
 
   .graphic-1 {
     height: 60px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  main {
+    .img-wrapper {
+      .btn-wrapper {
+        & > div:hover {
+          cursor: pointer;
+          background-color: #e4e4e4;
+        }
+      }
+    }
   }
 }
