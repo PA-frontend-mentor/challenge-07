@@ -13,7 +13,7 @@
 }
 
 body {
-  width: fit-content;
+  width: 100vw;
   height: 100vh;
 
   margin: 0 auto;
@@ -27,6 +27,8 @@ body {
 
 main {
   display: flex;
+  justify-content: center;
+
   height: 500px;
   position: relative;
 
@@ -144,9 +146,9 @@ main {
 
 .graphic-1 {
   background: url(./images/pattern-curve.svg) no-repeat;
-  background-size: cover;
+  background-size: contain;
 
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   left: 0px;
   width: 600px;
@@ -157,13 +159,21 @@ main {
   main {
     width: calc(100% - 90px);
     .quote-wrapper {
+      position: relative;
+
       .quote {
-        font-size: 24px;
+        font-size: 22px;
         width: 100%;
       }
 
       .writer-info {
         font-size: 16px;
+      }
+
+      .graphic-2 {
+        width: 80px;
+        top: 20px;
+        left: 0;
       }
     }
 
@@ -191,4 +201,109 @@ main {
 }
 
 @media only screen and (max-width: 895px) {
+  main {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .quote-wrapper {
+      text-align: center;
+      min-width: 580px;
+
+      margin-top: 1.5rem;
+
+      .writer-info {
+        justify-content: center;
+      }
+
+      .graphic-2 {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .img-wrapper {
+      position: relative;
+      transform: none;
+
+      .btn-wrapper {
+        position: absolute;
+        left: 50%;
+        /* transform: translateX(-50%); */
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .graphic-1 {
+    height: 110px;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  main {
+    .quote-wrapper {
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-width: 360px;
+
+      .quote {
+        font-size: 17px;
+        margin-bottom: 1rem;
+      }
+
+      .writer-info {
+        font-size: 15px;
+      }
+
+      .graphic-2 {
+        width: 60px;
+        top: 20px;
+      }
+    }
+
+    .img-wrapper {
+      .graphic-3 {
+        width: 390px;
+        height: 390px;
+        top: -37px;
+      }
+      .writer-img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+
+  .graphic-1 {
+    height: 70px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  main {
+    .quote-wrapper {
+      min-width: 325px;
+
+      .quote {
+        font-size: 16px;
+      }
+    }
+
+    .img-wrapper {
+      .graphic-3 {
+        width: 330px;
+        height: 330px;
+      }
+
+      .writer-img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+
+  .graphic-1 {
+    height: 60px;
+  }
 }

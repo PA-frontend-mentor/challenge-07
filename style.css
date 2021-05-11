@@ -14,9 +14,7 @@
 }
 
 body {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100vw;
   height: 100vh;
   margin: 0 auto;
   display: -webkit-box;
@@ -35,6 +33,9 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 500px;
   position: relative;
 }
@@ -164,8 +165,8 @@ main .graphic-2 {
 
 .graphic-1 {
   background: url(./images/pattern-curve.svg) no-repeat;
-  background-size: cover;
-  position: absolute;
+  background-size: contain;
+  position: fixed;
   bottom: 0px;
   left: 0px;
   width: 600px;
@@ -176,12 +177,20 @@ main .graphic-2 {
   main {
     width: calc(100% - 90px);
   }
+  main .quote-wrapper {
+    position: relative;
+  }
   main .quote-wrapper .quote {
-    font-size: 24px;
+    font-size: 22px;
     width: 100%;
   }
   main .quote-wrapper .writer-info {
     font-size: 16px;
+  }
+  main .quote-wrapper .graphic-2 {
+    width: 80px;
+    top: 20px;
+    left: 0;
   }
   main .img-wrapper .graphic-3 {
     background-size: contain;
@@ -198,6 +207,104 @@ main .graphic-2 {
   main .img-wrapper .btn-wrapper {
     width: 90px;
     height: 40px;
+  }
+}
+
+@media only screen and (max-width: 895px) {
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .quote-wrapper {
+    text-align: center;
+    min-width: 580px;
+    margin-top: 1.5rem;
+  }
+  main .quote-wrapper .writer-info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .quote-wrapper .graphic-2 {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  main .img-wrapper {
+    position: relative;
+    -webkit-transform: none;
+            transform: none;
+  }
+  main .img-wrapper .btn-wrapper {
+    position: absolute;
+    left: 50%;
+    /* transform: translateX(-50%); */
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .graphic-1 {
+    height: 110px;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  main .quote-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    min-width: 360px;
+  }
+  main .quote-wrapper .quote {
+    font-size: 17px;
+    margin-bottom: 1rem;
+  }
+  main .quote-wrapper .writer-info {
+    font-size: 15px;
+  }
+  main .quote-wrapper .graphic-2 {
+    width: 60px;
+    top: 20px;
+  }
+  main .img-wrapper .graphic-3 {
+    width: 390px;
+    height: 390px;
+    top: -37px;
+  }
+  main .img-wrapper .writer-img {
+    width: 300px;
+    height: 300px;
+  }
+  .graphic-1 {
+    height: 70px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  main .quote-wrapper {
+    min-width: 325px;
+  }
+  main .quote-wrapper .quote {
+    font-size: 16px;
+  }
+  main .img-wrapper .graphic-3 {
+    width: 330px;
+    height: 330px;
+  }
+  main .img-wrapper .writer-img {
+    width: 250px;
+    height: 250px;
+  }
+  .graphic-1 {
+    height: 60px;
   }
 }
 /*# sourceMappingURL=style.css.map */
